@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_order_items
+    description: "Staging model for cart-level data. Acts as the base for basket definition."
+    columns:
+      - name: order_item_id
+        description: "Primary key for the individual cart item."
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "Identifier for the checkout transaction (the 'basket')."
+        data_tests:
+          - not_null
+      - name: product_id
+        description: "Identifier for the specific product purchased."
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+
+  - name: stg_products
+    description: "Staging model for product metadata mapping numerical IDs to human-readable names."
+    columns:
+      - name: product_id
+        description: "Primary key for the product."
+        data_tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: "The actual title/name of the product."
+        data_tests:
+          - not_null
+      - name: category
+        description: "The specific category of the product (e.g., Activewear, Outerwear)."
+      - name: department
+        description: "The high-level department (e.g., Men, Women)."

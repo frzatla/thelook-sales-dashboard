@@ -1,5 +1,5 @@
 SELECT
-    id AS product_id,
+    id AS order_item_id,
     order_id,
     product_id
 FROM 

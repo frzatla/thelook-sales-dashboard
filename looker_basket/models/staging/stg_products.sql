@@ -1,6 +1,6 @@
 SELECT 
     id AS product_id,
-    name AS product_name, 
+    COALESCE(name, 'Unknown Product') as product_name,
     category,
     department
 FROM

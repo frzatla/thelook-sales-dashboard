@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: thelook_ecommerce
+    description: "Public e-commerce dataset containing orders, users, and events."
+    database: bigquery-public-data
+    schema: thelook_ecommerce
+    tables:
+      - name: order_items
+        description: "Contains product_id and order_id needed to identify baskets."
+      - name: products
+        description: "Product dimension table mapping product_id to names and categories."

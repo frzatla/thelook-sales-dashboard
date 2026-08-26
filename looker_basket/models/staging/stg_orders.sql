@@ -8,4 +8,4 @@ SELECT
     returned_at
 
 FROM
-    {{ source('thelook_ecommerce', 'orders') }}
+    {{ source('thelook_ecommerce', 'order_items') }}

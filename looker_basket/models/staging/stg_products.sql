@@ -5,5 +5,3 @@ SELECT
     department
 FROM
     {{ source('thelook_ecommerce', 'products') }}
-WHERE
-    name IS NOT NULL

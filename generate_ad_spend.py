@@ -69,6 +69,6 @@ for current_date in date_range:
 
 
 df = pd.DataFrame(records)
-output_path = "synthetic_ad_spend.csv"
-df.to_csv(output_path, index=False)
+downloads_path = os.path.join(os.path.expanduser("~"), "Downloads", "synthetic_ad_spend.csv")
+df.to_csv(downloads_path, index = False)
 print(df.head())

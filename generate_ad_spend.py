@@ -44,3 +44,31 @@ campaigns = [
 
 records = []
 
+# To generate daily data.
+for current_date in date_range:
+    # Weekend multiplier (20% higher ad spend on Saturdays/Sundays).
+    weekend_multiplier = 1.20 if current_date.dayofweek in [5, 6] else 1.00
+    
+    for camp in campaigns:
+        spend = max(5.0, np.random.normal(camp["base_spend"], camp["std_spend"]) * weekend_multiplier)
+        
+        cpc = np.random.uniform(0.75, 2.25)
+        ctr = np.random.uniform(0.015, 0.040)
+        
+        clicks = int(spend / cpc)
+        impressions = int(clicks / ctr)
+        
+        records.append({
+            "date": current_date.strftime("%Y-%m-%d"),
+            "campaign_id": camp["campaign_id"],
+            "channel": camp["channel"],
+            "daily_spend": round(spend, 2),
+            "impressions": impressions,
+            "clicks": clicks
+        })
+
+
+df = pd.DataFrame(records)
+output_path = "synthetic_ad_spend.csv"
+df.to_csv(output_path, index=False)
+print(df.head())

@@ -1,6 +1,5 @@
-name: marketing_roas
-
-profile: marketing_roas
+name: 'looker_basket'
+profile: looker_basket
 
 seed-paths: ["seeds"]
 model-paths: ["models"]
@@ -9,15 +8,9 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-seeds:
-  # Builds seeds into '<your_schema_name>_raw'
-  marketing_roas:
-    +schema: raw
-
 models:
-  marketing_roas:
+  looker_basket:
     +static_analysis: strict
-    # Materialize staging models as views, and marts as tables
     staging:
       +materialized: view
     marts:

@@ -4,9 +4,9 @@ from datetime import datetime
 
 
 np.random.seed(42)
-start_date = datetime(2021, 1, 1)
-end_date = datetime(2024, 12, 31)
-date_range = pd.date_range(start=start_date, end=end_date, freq='D')
+start_date = datetime(2024, 1, 1)
+end_date = datetime(2026, 8, 25)
+date_range = pd.date_range(start = start_date, end = end_date, freq = 'D')
 
 # For the marketing campaigns & baseline spending profiles.
 campaigns = [
@@ -43,3 +43,4 @@ campaigns = [
 ]
 
 records = []
+

@@ -1,0 +1,39 @@
+==================== 2026-08-26T08:28:13.015184Z | 01a03d2f-1d51-70d2-a5d3-b82e64e2f639 ====================
+08:28:13.015698 [info ]: Installing dbt project and profile setup
+08:28:13.076306 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+08:28:13.077238 [info ]: Success Project created successfully!
+08:28:13.077817 [info ]: Info Project name: jaffle_shop
+08:28:13.078183 [info ]: Info Project directory: jaffle_shop
+08:28:13.078738 [info ]: Info Setting up your profile...
+08:28:13.079208 [info ]: Info Creating new profile...
+08:31:14.837642 [info ]: Success Profile written to C:\Users\ASUS\.dbt\profiles.yml
+08:31:14.840365 [info ]: Validating profile inputs, adapters, and connection
+
+08:31:14.841389 [info ]: dbt-fusion 2.0.0-preview.212
+08:31:14.850154 [info ]: Started loading project
+08:31:14.917084 [info ]: Loading ~/.dbt/profiles.yml
+08:31:14.946894 [info ]: Finished loading project [  0.10s]
+08:31:14.955493 [info ]: Started debugging
+08:31:14.956409 [info ]: Debugging profile: dev
+08:31:14.956643 [info ]: Debugging dbt version: 2.0.0-preview.212
+08:31:14.956908 [info ]: Debugging platform: windows x86_64 (windows)
+08:31:14.957818 [info ]: Debugging adapter type: bigquery (remote)
+08:31:15.038121 [info ]: Debugging dependencies:
+  git: OK
+08:31:15.043950 [info ]: Debugging connection:
+  "database": "firzas-e-commerce-project",
+  "schema": "raw_marketing",
+  "method": "service-account",
+  "location": "US",
+  "dataproc_batch": null
+08:31:15.057139 [info ]: Finished debugging [  0.10s]
+08:31:15.061280 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the specified database.
+The following error was returned:
+
+Configuration Error: Keyfile '"C:\Users\ASUS\OneDrive\Documents\Data Personal Projects\campaign-performance-project\firzas-e-commerce-project-41561e711c82.json"' does not exist
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+08:31:16.317714 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [3m 3s]

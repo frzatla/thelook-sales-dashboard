@@ -21,6 +21,10 @@ models:
               arguments:
                 to: ref('stg_products')
                 field: product_id
+      - name: sale_price
+        description: "The actual price the customer paid for this item."
+        data_tests:
+          - not_null
 
   - name: stg_products
     description: "Staging model for product metadata mapping numerical IDs to human-readable names."

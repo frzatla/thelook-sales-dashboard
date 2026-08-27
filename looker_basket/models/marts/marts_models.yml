@@ -20,3 +20,26 @@ models:
           - not_null
       - name: product_b_category
         description: "The category of the second product."
+        
+  - name: fct_association_rules
+    description: "Contains directed association rules with calculated Support and Confidence percentages."
+    columns:
+      - name: base_category
+        description: "The primary category selected or filtered by the user."
+      - name: associated_category
+        description: "The category purchased alongside the base category."
+      - name: times_bought_together
+      - name: support_pct
+        description: "Percentage of total orders containing this specific pair."
+      - name: confidence_pct
+        description: "Probability that the associated category is bought given the base category is in the basket."
+
+  - name: fct_baskets
+    description: "Transaction-level aggregation for calculating total order values and basket sizes."
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+      - name: total_items
+      - name: basket_value

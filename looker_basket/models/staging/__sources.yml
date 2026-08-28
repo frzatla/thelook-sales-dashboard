@@ -12,3 +12,5 @@ sources:
         description: "Product dimension table mapping product_id to names and categories."
       - name: users
         description: "Contains columns regarding each user."
+      - name: events
+        description: "Contains details about a certain event."

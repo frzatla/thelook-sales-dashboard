@@ -63,3 +63,26 @@ models:
         description: "Longitude coordinate of the user's location for mapping."
       - name: user_created_at
         description: "Timestamp of when the user registered their account."
+  
+  - name: stg_events
+    description: "Staging model for raw event data tracking user page views, clicks, and checkout progression."
+    columns:
+      - name: event_id
+        description: "Primary key for the individual event."
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "Identifier for the user who triggered the event. Can be null for anonymous browsers."
+      - name: session_id
+        description: "Identifier grouping a continuous browsing session."
+        data_tests:
+          - not_null
+      - name: created_at
+        description: "Timestamp of when the event occurred."
+        data_tests:
+          - not_null
+      - name: event_type
+        description: "The specific action taken (e.g., Home, Department, Product, Cart, Purchase, Cancel)."
+        data_tests:
+          - not_null

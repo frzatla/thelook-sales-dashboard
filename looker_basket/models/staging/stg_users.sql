@@ -13,7 +13,8 @@ renamed AS (
         country,
         latitude,
         longitude,
-        created_at AS user_created_at
+        created_at AS user_created_at,
+        traffic_source
     FROM 
         source
 )

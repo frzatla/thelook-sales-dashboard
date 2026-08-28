@@ -10,7 +10,8 @@ products AS (
         id AS product_id,
         COALESCE(name, 'Unknown Product') AS product_name,
         category,
-        department
+        department,
+        cost
     FROM
         source
 )

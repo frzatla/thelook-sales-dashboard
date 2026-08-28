@@ -35,7 +35,8 @@ joined AS (
         u.state,
         u.city,
         u.latitude,
-        u.longitude
+        u.longitude,
+        u.traffic_source
     FROM
         order_items oi
     LEFT JOIN

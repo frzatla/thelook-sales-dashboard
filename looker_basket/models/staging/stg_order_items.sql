@@ -12,7 +12,8 @@ orders AS (
         user_id,
         product_id,
         sale_price,
-        created_at
+        created_at,
+        status
     FROM
         source
 )

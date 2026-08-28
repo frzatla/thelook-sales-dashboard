@@ -42,3 +42,24 @@ models:
         description: "The specific category of the product (e.g., Activewear, Outerwear)."
       - name: department
         description: "The high-level department (e.g., Men, Women)."
+        
+  - name: stg_users
+    description: "Staging model for user geographic and account creation metadata."
+    columns:
+      - name: user_id
+        description: "Primary key for the user account."
+        data_tests:
+          - unique
+          - not_null
+      - name: state
+        description: "State or province where the user resides."
+      - name: city
+        description: "City where the user resides."
+      - name: country
+        description: "Country where the user resides."
+      - name: latitude
+        description: "Latitude coordinate of the user's location for mapping."
+      - name: longitude
+        description: "Longitude coordinate of the user's location for mapping."
+      - name: user_created_at
+        description: "Timestamp of when the user registered their account."

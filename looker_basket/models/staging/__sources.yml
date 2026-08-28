@@ -10,3 +10,5 @@ sources:
         description: "Contains product_id and order_id needed to identify baskets."
       - name: products
         description: "Product dimension table mapping product_id to names and categories."
+      - name: users
+        description: "Contains columns regarding each user."

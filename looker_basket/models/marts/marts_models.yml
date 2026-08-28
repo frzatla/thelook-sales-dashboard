@@ -43,3 +43,44 @@ models:
           - not_null
       - name: total_items
       - name: basket_value
+  
+  - name: fct_sales
+    description: "Core fact table unifying order items, products, and users to calculate item-level profitability and append regional data."
+    columns:
+      - name: order_item_id
+        description: "Primary key for the individual order item."
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "Identifier for the checkout transaction."
+        data_tests:
+          - not_null
+      - name: user_id
+        description: "Identifier for the purchasing user."
+        data_tests:
+          - not_null
+      - name: product_id
+        description: "Identifier for the specific product purchased."
+        data_tests:
+          - not_null
+      - name: order_created_at
+        description: "Timestamp indicating when the order was placed."
+      - name: sale_price
+        description: "The revenue generated from the item sale."
+      - name: cost
+        description: "The base cost of the item."
+      - name: gross_profit
+        description: "The calculated margin (sale_price - cost) for the item."
+      - name: category
+        description: "The overarching product category."
+      - name: country
+        description: "Country where the user is located."
+      - name: state
+        description: "State or province where the user is located."
+      - name: city
+        description: "City where the user is located."
+      - name: latitude
+        description: "Latitude coordinate for geographic mapping."
+      - name: longitude
+        description: "Longitude coordinate for geographic mapping."

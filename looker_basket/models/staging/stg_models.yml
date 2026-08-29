@@ -21,10 +21,24 @@ models:
               arguments:
                 to: ref('stg_products')
                 field: product_id
+      - name: user_id
+        description: "Primary key for the user account."
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_users')
+                field: user_id 
       - name: sale_price
         description: "The actual price the customer paid for this item."
         data_tests:
           - not_null
+      - name: status
+        description: "Status of the order."
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['Processing', 'Shipped', 'Complete', 'Cancelled', 'Returned']
 
   - name: stg_products
     description: "Staging model for product metadata mapping numerical IDs to human-readable names."
@@ -42,6 +56,8 @@ models:
         description: "The specific category of the product (e.g., Activewear, Outerwear)."
       - name: department
         description: "The high-level department (e.g., Men, Women)."
+      - name: cost 
+        description: "Cost of the product."
         
   - name: stg_users
     description: "Staging model for user geographic and account creation metadata."
@@ -63,6 +79,8 @@ models:
         description: "Longitude coordinate of the user's location for mapping."
       - name: user_created_at
         description: "Timestamp of when the user registered their account."
+      - name: traffic_source
+        description: "Source/medium of the user."
   
   - name: stg_events
     description: "Staging model for raw event data tracking user page views, clicks, and checkout progression."

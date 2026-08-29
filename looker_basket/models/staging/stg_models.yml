@@ -38,7 +38,8 @@ models:
         data_tests:
           - not_null
           - accepted_values:
-              values: ['Processing', 'Shipped', 'Complete', 'Cancelled', 'Returned']
+              arguments:
+                values: ['Processing', 'Shipped', 'Complete', 'Cancelled', 'Returned']
 
   - name: stg_products
     description: "Staging model for product metadata mapping numerical IDs to human-readable names."

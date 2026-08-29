@@ -84,3 +84,27 @@ models:
         description: "Latitude coordinate for geographic mapping."
       - name: longitude
         description: "Longitude coordinate for geographic mapping."
+      - name: traffic_source
+        description: "Source/medium of the user."
+  
+  - name: agg_monthly_financials
+    description: "Monthly aggregated financial and sales metrics at the category and geographic level."
+    columns:
+      - name: order_month
+        description: "The truncated month and year the orders were placed."
+        data_tests:
+          - not_null
+      - name: category
+        description: "The high-level product category."
+      - name: country
+        description: "The country where the order was placed."
+      - name: state
+        description: "The state or province where the order was placed."
+      - name: quantity_sold
+        description: "Total count of individual items purchased."
+        data_tests:
+          - not_null
+      - name: total_sales
+        description: "Total revenue generated from the items."
+      - name: total_gross_profit
+        description: "Total gross profit calculated from total sales minus total costs."

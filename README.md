@@ -5,7 +5,7 @@
 ![Dashboard Screenshot](Insert Path/Link to Screenshot Here)
 
 ## Project Overview
-This project transforms raw e-commerce data into an executive-level sales tracker. Moving beyond initial market basket analysis, the pipeline processes transactional data to deliver high-level revenue trends, profitability metrics, and geographic performance clearly. 
+This project transforms raw e-commerce data from TheLook into an executive-level sales tracker. The pipeline built using dbt, processes transactional data to deliver high-level revenue trends, profitability metrics, and geographic performance clearly. 
 
 ## Tech Stack
 * **Data Warehouse:** Google BigQuery (Source: `thelook_ecommerce` dataset)

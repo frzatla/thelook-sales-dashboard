@@ -1,5 +1,5 @@
-name: 'looker_basket'
-profile: looker_basket
+name: 'thelook_dashboard'
+profile: thelook_dashboard
 
 seed-paths: ["seeds"]
 model-paths: ["models"]

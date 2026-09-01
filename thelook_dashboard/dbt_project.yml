@@ -9,7 +9,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  looker_basket:
+  thelook_dashboard:
     +static_analysis: strict
     staging:
       +materialized: view

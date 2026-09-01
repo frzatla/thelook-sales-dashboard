@@ -11,6 +11,7 @@ products AS (
         COALESCE(name, 'Unknown Product') AS product_name,
         category,
         department,
+        brand,
         cost
     FROM
         source

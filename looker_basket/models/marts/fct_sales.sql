@@ -30,6 +30,7 @@ joined AS (
         p.cost,
         (oi.sale_price - p.cost) AS gross_profit,
         p.category,
+        p.brand,
         p.product_name,
         u.country,
         u.state,

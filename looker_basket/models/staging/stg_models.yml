@@ -57,6 +57,10 @@ models:
         description: "The specific category of the product (e.g., Activewear, Outerwear)."
       - name: department
         description: "The high-level department (e.g., Men, Women)."
+      - name: brand
+        description: "Name of the brand of the product"
+        data_tests:
+          - not_null
       - name: cost 
         description: "Cost of the product."
         

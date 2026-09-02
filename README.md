@@ -1,6 +1,10 @@
 # TheLook: Sales Performance Dashboard
 
-https://github.com/user-attachments/assets/c3356f13-9a19-4587-9a3e-da2f5499ccd9  
+
+
+https://github.com/user-attachments/assets/1e4069c1-aeb5-48e3-9711-b59a60c0a54c
+
+
 [**View the Interactive Dashboard Here:**](https://public.tableau.com/app/profile/firza.pradipta.atalla/viz/TheLookSalesPerformanceDashboard/TheLook?publish=yes)
 
 ## Project Overview

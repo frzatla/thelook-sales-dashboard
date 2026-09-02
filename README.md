@@ -1,8 +1,7 @@
 # TheLook: Sales Performance Dashboard
 
-[**View the Interactive Dashboard Here:**](https://public.tableau.com/app/profile/firza.pradipta.atalla/viz/TheLookSalesPerformanceDashboard/TheLook?publish=yes)
-
 https://github.com/user-attachments/assets/3b28ad13-68be-4e1f-96dd-3dc0486570ed
+[**View the Interactive Dashboard Here:**](https://public.tableau.com/app/profile/firza.pradipta.atalla/viz/TheLookSalesPerformanceDashboard/TheLook?publish=yes)
 
 ## Project Overview
 This project transforms raw e-commerce data from TheLook into an executive-level sales tracker. The pipeline built using dbt, processes transactional data to deliver high-level revenue trends, profitability metrics, and geographic performance clearly. 

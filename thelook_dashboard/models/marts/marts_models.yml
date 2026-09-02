@@ -67,71 +67,70 @@ models:
         description: "Total gross profit calculated from total sales minus total costs."
 
   - name: fct_obt
-    description: "One big table that combines columns from agg_monthly_financials and fct_sales."
+    description: "One big table combining order item, product, and user attributes at order-item grain, including unfiltered order status and customer type."
     columns:
       - name: order_item_id
-        description: Unique identifier for each order line item.
-        tests:
+        description: "Unique identifier for each order line item."
+        data_tests:
           - unique
           - not_null
       - name: order_id
-        description: Identifier for the order this item belongs to.
-        tests:
+        description: "Identifier for the order this item belongs to."
+        data_tests:
           - not_null
       - name: user_id
-        description: Identifier for the customer who placed the order.
-        tests:
+        description: "Identifier for the customer who placed the order."
+        data_tests:
           - not_null
           - relationships:
               to: ref('stg_users')
               field: user_id
       - name: product_id
-        description: Identifier for the product sold.
-        tests:
+        description: "Identifier for the product sold."
+        data_tests:
           - not_null
           - relationships:
               to: ref('stg_products')
               field: product_id
       - name: status
-        description: Order item status, unfiltered (includes Cancelled and Returned).
-        tests:
+        description: "Order item status, unfiltered (includes Cancelled and Returned)."
+        data_tests:
           - not_null
           - accepted_values:
               values: ['Processing', 'Shipped', 'Complete', 'Cancelled', 'Returned']
       - name: order_created_at
-        description: Timestamp the order item was created.
-        tests:
+        description: "Timestamp the order item was created."
+        data_tests:
           - not_null
       - name: sale_price
-        description: Sale price of the item.
-        tests:
+        description: "Sale price of the item."
+        data_tests:
           - not_null
       - name: cost
-        description: Product cost, from stg_products.
+        description: "Product cost, from stg_products."
       - name: gross_profit
-        description: sale_price minus cost. Null if cost is unavailable.
+        description: "Sale price minus cost. Null if cost is unavailable."
       - name: category
-        description: Product category.
+        description: "Product category."
       - name: brand
-        description: Product brand.
+        description: "Product brand."
       - name: product_name
-        description: Product name.
+        description: "Product name."
       - name: country
-        description: Customer country.
+        description: "Customer country."
       - name: state
-        description: Customer state.
+        description: "Customer state."
       - name: city
-        description: Customer city.
+        description: "Customer city."
       - name: latitude
-        description: Customer latitude.
+        description: "Customer latitude."
       - name: longitude
-        description: Customer longitude.
+        description: "Customer longitude."
       - name: traffic_source
-        description: Acquisition traffic source for the customer.
+        description: "Acquisition traffic source for the customer."
       - name: customer_type
-        description: "New if this order was the customer's first order (by order_rank),
-          otherwise Returning."
-        tests:
+        description: "New if this order was the customer's first order (by order_rank), otherwise Returning."
+        data_tests:
           - not_null
           - accepted_values:
               values: ['New', 'Returning']

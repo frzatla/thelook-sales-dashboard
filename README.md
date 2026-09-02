@@ -1,6 +1,6 @@
 # TheLook: Sales Performance Dashboard
 
-**View the Interactive Dashboard Here:** [Insert Tableau Public Link Here]
+**View the Interactive Dashboard Here:** [[[Insert Tableau Public Link Here](https://public.tableau.com/app/profile/firza.pradipta.atalla/viz/thelook_dashboard/TheLook?publish=yes)]]
 
 ![Dashboard Screenshot](Insert Path/Link to Screenshot Here)
 

@@ -97,7 +97,8 @@ models:
         data_tests:
           - not_null
           - accepted_values:
-              values: ['Processing', 'Shipped', 'Complete', 'Cancelled', 'Returned']
+              arguments:
+                values: ['Processing', 'Shipped', 'Complete', 'Cancelled', 'Returned']
       - name: order_created_at
         description: "Timestamp the order item was created."
         data_tests:
@@ -133,4 +134,5 @@ models:
         data_tests:
           - not_null
           - accepted_values:
-              values: ['New', 'Returning']
+              arguments:
+                values: ['New', 'Returning']

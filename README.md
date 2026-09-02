@@ -29,5 +29,18 @@ This project transforms raw e-commerce data from TheLook into an executive-level
 * **Data Transformation:** dbt (data build tool)
 * **Business Intelligence:** Tableau Public
 
+### Staging Models
+* **`stg_events`**: Cleans, casts, and standardizes raw event and web traffic data.
+* **`stg_order_items`**: Cleans and standardizes raw order item transaction records.
+* **`stg_products`**: Standardizes raw product catalog data, including categories and brands.
+* **`stg_users`**: Standardizes raw user and customer demographic information.
+
+### Mart Models
+* **`agg_monthly_financials`**: Aggregates core financial metrics on a monthly basis.
+* **`fct_sales`**: A granular fact table containing individual sales transactions and profit calculations.
+* **`fct_obt`**: The final "One Big Table" combining granular and aggregated data for seamless visualization. *Note: Both `agg_monthly_financials` and `fct_sales` serve as the foundational building blocks for this `fct_obt` model.*
+
 ## Data Architecture & dbt Modeling
 The data foundation is modeled in dbt utilizing static `.hyper` extracts to comply with Tableau Public's sharing constraints and separate data sources to prevent cross-join duplication.
+
+**Dataset Source:** [TheLook E-Commerce Dataset on Google BigQuery](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce)
